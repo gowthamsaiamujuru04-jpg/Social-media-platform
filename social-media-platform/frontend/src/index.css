@@ -1,0 +1,368 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f0f2f5;
+  color: #1c1e21;
+}
+
+button {
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  margin: 4px;
+  cursor: pointer;
+  background: #1877f2;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+input,
+textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px 14px;
+  border: 1px solid #ccd0d5;
+  border-radius: 8px;
+  font-size: 15px;
+  background: white;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #1877f2;
+  box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.12);
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #e4e6eb;
+  margin: 18px 0;
+}
+
+/* Main App */
+
+.app-container {
+  min-height: 100vh;
+}
+
+/* Navigation */
+
+.navbar {
+  background: white;
+  border-bottom: 1px solid #dddfe2;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #1877f2;
+  margin-right: 18px;
+  white-space: nowrap;
+}
+
+.navbar button {
+  background: transparent;
+  color: #444;
+  margin: 0;
+  padding: 10px 12px;
+}
+
+.navbar button:hover {
+  background: #f0f2f5;
+  color: #1877f2;
+  transform: none;
+}
+
+.logout-button {
+  margin-left: auto !important;
+  background: #e74c3c !important;
+  color: white !important;
+}
+
+.logout-button:hover {
+  background: #d63031 !important;
+  color: white !important;
+}
+
+/* Page */
+
+.page-container {
+  width: 100%;
+  max-width: 950px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* General Card */
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Posts */
+
+.post-card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 18px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e4e6eb;
+}
+
+.post-card:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+  font-weight: bold;
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.post-content {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 12px 0;
+}
+
+.post-actions {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+  border-top: 1px solid #e4e6eb;
+  padding-top: 12px;
+  margin-top: 15px;
+}
+
+.post-actions button {
+  background: #f0f2f5;
+  color: #333;
+}
+
+.post-actions button:hover {
+  background: #e4e6eb;
+  color: #1877f2;
+}
+
+/* Notifications */
+
+.notification-card {
+  background: white;
+  padding: 17px;
+  margin: 12px 0;
+  border-radius: 10px;
+  border-left: 4px solid #1877f2;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+}
+
+.notification-card p {
+  margin: 0 0 7px;
+  font-size: 15px;
+}
+
+.notification-card small {
+  color: #65676b;
+}
+
+/* Users */
+
+.user-card {
+  background: white;
+  padding: 20px;
+  margin: 14px 0;
+  border-radius: 12px;
+  border: 1px solid #e4e6eb;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.user-card h3 {
+  margin-bottom: 8px;
+}
+
+.user-card p {
+  color: #65676b;
+  margin: 6px 0;
+}
+
+/* Chat */
+
+.chat-box {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid #e4e6eb;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+}
+
+/* Forms */
+
+form {
+  background: white;
+  border-radius: 12px;
+}
+
+form button {
+  margin-top: 10px;
+}
+
+/* Messages */
+
+.message {
+  padding: 10px 14px;
+  margin: 8px 0;
+  border-radius: 10px;
+  background: #f0f2f5;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+  .navbar {
+    padding: 10px;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .navbar button {
+    font-size: 13px;
+    padding: 8px 9px;
+  }
+
+  .logout-button {
+    margin-left: 0 !important;
+  }
+
+  .page-container {
+    margin: 15px auto;
+    padding: 0 10px;
+  }
+
+  .card,
+  .post-card,
+  .user-card,
+  .chat-box {
+    padding: 16px;
+  }
+}
+
+/* =========================
+   MESSAGES / CHAT UI
+========================= */
+
+.chat-box {
+  background: white;
+  border-radius: 14px;
+  border: 1px solid #e4e6eb;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+  min-height: 400px;
+}
+
+.chat-box h2,
+.chat-box h3 {
+  margin-bottom: 15px;
+}
+
+.chat-box input {
+  max-width: 100%;
+}
+
+.chat-box button {
+  margin-top: 8px;
+}
+
+.message {
+  background: #f0f2f5;
+  padding: 12px 15px;
+  margin: 8px 0;
+  border-radius: 12px;
+  line-height: 1.5;
+  border: 1px solid #e4e6eb;
+}
+
+.message:hover {
+  background: #e7f3ff;
+}
+
+.chat-user {
+  background: white;
+  border: 1px solid #e4e6eb;
+  border-radius: 10px;
+  padding: 12px;
+  margin: 8px 0;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.chat-user:hover {
+  background: #e7f3ff;
+  border-color: #1877f2;
+}
+
+.chat-input-area {
+  display: flex;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.chat-input-area input {
+  flex: 1;
+}
+
+@media (max-width: 700px) {
+  .chat-box {
+    padding: 15px;
+  }
+
+  .chat-input-area {
+    flex-direction: column;
+  }
+
+  .chat-input-area button {
+    width: 100%;
+  }
+}
